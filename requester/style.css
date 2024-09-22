@@ -1,0 +1,102 @@
+/* requester/styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eef2f3;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333333;
+}
+
+.auth-section, .form-section {
+    margin-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, select, textarea, button {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.sos-button {
+    background-color: #e74c3c;
+    margin-top: 10px;
+}
+
+.sos-button:hover {
+    background-color: #c0392b;
+}
+
+#status-message, #auth-message {
+    text-align: center;
+    font-size: 16px;
+}
+
+.instructions {
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.instructions ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+}
+/* requester/styles.css */
+
+/* ... existing styles ... */
+
+.instructions {
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.instructions ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.instructions h3 {
+    color: #e74c3c;
+}

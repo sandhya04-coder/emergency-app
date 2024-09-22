@@ -1,0 +1,110 @@
+/* responder/styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f7;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333333;
+}
+
+.auth-section, .signals-section {
+    margin-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, button {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #2ecc71;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #27ae60;
+}
+
+#auth-message {
+    text-align: center;
+    font-size: 16px;
+}
+
+#signals {
+    margin-top: 20px;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.signal {
+    border-bottom: 1px solid #dddddd;
+    padding: 15px 0;
+}
+
+.signal:last-child {
+    border-bottom: none;
+}
+
+.signal p {
+    margin: 5px 0;
+}
+
+.type-medical {
+    border-left: 5px solid #e74c3c;
+    padding-left: 10px;
+}
+
+.type-fire {
+    border-left: 5px solid #f1c40f;
+    padding-left: 10px;
+}
+
+.type-police {
+    border-left: 5px solid #3498db;
+    padding-left: 10px;
+}
+
+.type-other {
+    border-left: 5px solid #95a5a6;
+    padding-left: 10px;
+}
+
+@media (max-width: 800px) {
+    .container {
+        padding: 20px;
+    }
+}
+/* responder/styles.css */
+
+/* ... existing styles ... */
+
+#estimated-time {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #2c3e50;
+}

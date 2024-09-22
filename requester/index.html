@@ -1,0 +1,98 @@
+<!-- requester/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emergency Requester</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Emergency Requester</h1>
+        
+        <div class="auth-section">
+            <h2>Login / Register</h2>
+            <form id="auth-form">
+                <input type="text" id="username" placeholder="Username" required />
+                <input type="password" id="password" placeholder="Password" required />
+                <select id="role" required>
+                    <option value="">Select Role</option>
+                    <option value="requester">Requester</option>
+                    <!-- Only responders should see the responder option, handled later -->
+                </select>
+                <button type="submit" id="auth-btn">Login</button>
+                <p id="auth-message"></p>
+            </form>
+        </div>
+
+        <div class="form-section" style="display:none;">
+            <h2>Send Emergency Signal</h2>
+            <div class="form-group">
+                <label for="emergency-type">Select Emergency Type:</label>
+                <select id="emergency-type">
+                    <option value="medical">Medical</option>
+                    <option value="fire">Fire</option>
+                    <option value="police">Police</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <!-- requester/index.html -->
+
+<!-- ... previous code ... -->
+
+<div class="instructions">
+    <h3>Emergency Instructions:</h3>
+    <ul>
+        <li>Stay calm and ensure your safety.</li>
+        <li>Provide accurate details about the emergency.</li>
+        <li>Remain in your location until help arrives.</li>
+        <li>If it's a fire, evacuate immediately and call 911.</li>
+        <li>If it's a medical emergency, provide first aid if trained.</li>
+    </ul>
+</div>
+
+<!-- ... rest of the code ... -->
+
+
+
+
+
+
+            <div class="form-group">
+                <label for="description">Description (optional):</label>
+                <textarea id="description" rows="4" placeholder="Describe your emergency..."></textarea>
+            </div>
+            
+            <button id="send-signal-btn">Send Emergency Signal</button>
+            <button id="sos-btn" class="sos-button">SOS</button>
+            
+            <p id="status-message"></p>
+
+            <div class="instructions">
+                <h3>Emergency Instructions:</h3>
+                <ul>
+                    <li>Stay calm and remain in a safe location.</li>
+                    <li>Provide as much detail as possible about the emergency.</li>
+                    <li>Await confirmation from responders.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js').then(function(registration) {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, function(err) {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            });
+        }
+    </script>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
